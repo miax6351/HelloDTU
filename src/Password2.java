@@ -5,11 +5,12 @@ public class Password2 {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
+        String password = "";
 
         while (true) {
 
             System.out.print("Skriv password: ");
-            String password = s.next();
+            password = s.next();
             int length = password.length();
 
             if (length >= 9) {
