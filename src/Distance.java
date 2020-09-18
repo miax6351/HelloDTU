@@ -27,7 +27,7 @@ public class Distance {
 
 static double distance(double a, double b, double x1,double y1) {
 
-       return (abs(a*x1-y1+b)) / (sqrt(1 + pow(a, 2)));
+       return abs(a*x1-y1+b) / sqrt(1 + pow(a, 2));
 
 }
 
