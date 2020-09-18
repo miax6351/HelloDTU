@@ -35,6 +35,8 @@ public class Dyrelyde {
 
             case "Duck": System.out.println("Quack");
 
+            case "Stop": break;
+
             default: System.out.println("?");
 
         }
