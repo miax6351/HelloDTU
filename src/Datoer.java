@@ -26,7 +26,8 @@ public class Datoer {
                             break;
                         default:
                             dag++;
-                            System.out.println(dag);
+                            System.out.print(dag + "/");
+                            System.out.println(måned);
                             break;
 
                     }
