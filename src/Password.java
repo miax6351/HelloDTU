@@ -10,9 +10,9 @@ public class Password {
 
         int length = password.length();
 
-        if (length > 9) {
+        if (length >= 9) {
             System.out.println("Password too long");
-        } else if (length < 4) {
+        } else if (length <= 4) {
             System.out.println("Password too short");
         } else {
             System.out.println("Password tilpas");

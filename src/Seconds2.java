@@ -8,21 +8,14 @@ public class Seconds2 {
 
         int sec = Integer.parseInt(s.nextLine());
 
-        double days = 0;
-        double hours = 0;
-        double minutes = 0;
-        double restSec1 = 0;
-        double restSec2 = 0;
-        double restSec3 = 0;
+        double days,hours, minutes, restSec1, restSec2, restSec3 = 0;
 
          /*
-static int calc(int sec) {
-        return 1;
-        //1 min = 60 sec
-        //1 hour = 360 sec
-        //1 day = 86400 sec
-}
-     */
+        1 min = 60 sec
+        1 hour = 360 sec
+        1 day = 86400 sec
+        */
+
         System.out.print(sec + " seconds equals ");
 
         days = (int)(sec/86400);

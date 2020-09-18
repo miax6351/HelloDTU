@@ -22,6 +22,7 @@ public class Distance {
         double y1 = Integer.parseInt(s.nextLine());
 
         System.out.println(distance(a,b,x1,y1));
+        s.close();
 
 }
 

@@ -14,7 +14,6 @@ public class ASCII_Tabel {
             symbol = input.charAt(0);
 
             if (input.compareTo("exit") == 0) {
-                System.out.println("Program ended");
                 break;
             }
             if (symbol <= 'Z' && symbol >= 'A') {
