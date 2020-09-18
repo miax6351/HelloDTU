@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.logging.SocketHandler;
 
 public class Datoer {
 
@@ -10,52 +9,79 @@ public class Datoer {
         int måned = 0;
         int dag = 0;
 
-        måned = s.nextInt();
+        System.out.println("DAGEN EFTER d..");
+        System.out.println("skriv dato, måned og år:");
         dag = s.nextInt();
+        måned = s.nextInt();
         år = s.nextInt();
+
+        if (måned < 0 || måned > 0) {
+            System.out.println("Ugyldig dato");
+        }
 
         switch (måned) {
 
-                case 1, 3, 5, 7, 8, 10, 12:
+            case 1, 3, 5, 7, 8, 10:
 
-                    switch (dag) {
-
-                        case 31:
-                            System.out.println(1);
-                            måned++;
-                            break;
-                        default:
-                            dag++;
-                            System.out.print(dag + "/");
-                            System.out.println(måned);
-                            break;
-
+                    if (dag == 31) {
+                        dag = 1;
+                        måned++;
+                    } else if (dag > 31 || dag < 0) {
+                        System.out.println("Ugyldig dato");
+                    }
+                    else {
+                        dag++;
                     }
                     break;
 
+            case 4,6,9,11:
 
-
-            case 2,4,6,9,11:
-                dag = s.nextInt();
-                switch (dag) {
-
-                    case 30:
-                        System.out.println(1);
+                    if (dag == 30) {
+                        dag = 1;
                         måned++;
-                        break;
-                    default:
+                    }  else if (dag > 30 || dag < 0) {
+                        System.out.println("Ugyldig dato");
+                    }else {
                         dag++;
-                        System.out.println(dag);
-                        break;
-
                 }
-            default: break;
+                    break;
 
-        }
+            case 2:
+            if (år%4==0 && år%400==0 && dag==29) {
+                dag = 1;
+                måned++;
+                if (dag > 29 || dag < 0) {
+                    System.out.println("Ugyldig dato");
+                }
+            } else if (år%4 == 0 && år%100==0 && dag==28) {
+                dag = 1;
+                måned++;
+                if (dag > 28 || dag < 0) {
+                    System.out.println("Ugyldig dato");
+                }
+            } else if (år%4 == 0 && år%100!=0 && dag == 29){
+                dag = 1;
+                måned++;
+                if (dag > 29 || dag < 0) {
+                    System.out.println("Ugyldig dato");
+                }
+            }
+            else {
+                dag++;
+            }
 
+            case 12:
+            if (dag == 31) {
+                dag = 1;
+                måned = 1;
+                år++;
+            } else if (dag > 31 || dag < 0) {
+                System.out.println("Ugyldig dato");
+            }
 
+            }
 
-        System.out.println(år);
+        System.out.println(dag + "/" + måned + " " + år);
 
         s.close();
 
