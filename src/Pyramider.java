@@ -6,10 +6,9 @@ public class Pyramider {
 
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        int hashtag = 0;
+        int antal_hashtags = 0;
 
-
-
+        //int p tæller pyramidenummer
         for (int p = 1; p <= n; p++) {
 
             if (n == 1) {
@@ -19,6 +18,7 @@ public class Pyramider {
 
                 System.out.println("Pyramid " + p);
 
+                //alle pyramider indtil pyramide nr. 2 får dette foretaget
                 for (int i = 1; i <= p; i++) {
 
                     //der skal printes punktummer ift niveau pyramide
@@ -27,9 +27,9 @@ public class Pyramider {
 
                     }
 
-                    //antallet af hashtags pr niveau pyramide
-                    hashtag = 2 * i - 1;
-                    for (int j = 1; j <= hashtag; j++) {
+                    //antallet af hashtags ift niveau pyramide
+                    antal_hashtags = 2 * i - 1;
+                    for (int j = 1; j <= antal_hashtags; j++) {
                         System.out.print("#");
 
                     }
@@ -41,11 +41,10 @@ public class Pyramider {
                     }
                     //nyt niveau
                     System.out.print("\n");
-
                 }
             }
 
-
+            System.out.println(" ");
             }
             s.close();
 
