@@ -45,8 +45,8 @@ public class Pyramider {
             }
 
             System.out.println(" ");
-            }
-            s.close();
+        }
+        s.close();
 
     }
 }

@@ -18,7 +18,7 @@ public class Sinus {
                     System.out.println("*");
                 } else {
                     System.out.print("|");
-                    sinusregning = 20*sin(i/16.0);
+                    sinusregning = sin(i*2*Math.PI)*20;
                     for (sp = 0; sp < sinusregning; sp++) {
                         System.out.print(" ");
                     }
