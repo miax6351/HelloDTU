@@ -8,6 +8,15 @@ public class Pyramider {
         int n = s.nextInt();
         int antal_hashtags = 0;
 
+        pyramide(n, antal_hashtags);
+
+        s.close();
+
+
+
+    }
+
+    static void pyramide(int n, int antal_hashtags) {
         //int p tæller pyramidenummer
         for (int p = 1; p <= n; p++) {
 
@@ -46,7 +55,8 @@ public class Pyramider {
 
             System.out.println(" ");
         }
-        s.close();
+
 
     }
 }
+
